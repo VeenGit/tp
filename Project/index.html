@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Digital CookBook and Meal Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#home">Cookbook & Meal Planner</a>
+        <button class="navbar-toggler" id="nav-toggle" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#recipes">Recipes</a></li>
+                <li class="nav-item"><a class="nav-link" href="#meal-planner">Meal Planner</a></li>
+                <li class="nav-item"><a class="nav-link" href="#nutrition">Nutrition Labels</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#signup">Sign Up / Sign In</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="home" class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Your Digital Cookbook & Meal Planner!</h1>
+            <p class="lead">Discover amazing recipes and easily plan your weekly meals...</p>
+            <hr class="my-4">
+            <p>Get started by exploring our collection of recipes or creating your own meal plan.</p>
+            <a class="btn btn-primary btn-lg" href="#recipes" role="button">Browse Recipes</a>
+        </div>
+    </section>
+    
+    <section id="recipes" class="container mt-5">
+        <h2>Recipes</h2>
+        <p>Explore our collection of recipes!</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/pizza.jpg" class="card-img-top" alt="Pizza Recipe">
+                    <div class="card-body">
+                        <h5 class="card-title">Delicious Pizza</h5>
+                        <p class="card-text">Pizza is an Italian dish typically consisting of a flat base of leavened
+                            wheat-based dough topped with tomato, cheese, and other ingredients, baked at a high
+                            temperature, traditionally in a wood-fired oven</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="images/lasagna.jpg" class="card-img-top" alt="Lasagna Recipe">
+                    <div class="card-body">
+                        <h5 class="card-title">Italian Lasagna</h5>
+                        <p class="card-text">A classic Italian dish that's perfect for dinner.In Italian cuisine it is
+                            made of stacked layers of pasta alternating with fillings such as ragù, béchamel sauce,
+                            vegetables, cheeses, and seasonings and spices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="manage-recipes" class="container mt-5">
+        <h2>Manage Recipes</h2>
+        <!-- Recipe Form -->
+        <form id="recipe-form">
+            <div class="form-group">
+                <label for="recipe-name">Recipe Name</label>
+                <input type="text" class="form-control" id="recipe-name" required>
+            </div>
+            <div class="form-group">
+                <label for="recipe-ingredients">Ingredients</label>
+                <textarea class="form-control" id="recipe-ingredients" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="recipe-steps">Steps</label>
+                <textarea class="form-control" id="recipe-steps" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Recipe</button>
+        </form>
+    
+        <!-- Recipes List -->
+        <h3 class="mt-5">Recipe Collection</h3>
+        <ul id="recipe-list" class="list-group"></ul>
+    </section>
+    
+    <!-- Meal Planner Section -->
+    <section id="meal-planner" class="container mt-5">
+        <h2>Meal Planner</h2>
+        <p>Plan your meals for the week!</p>
+        <h3 class="mt-4">Weekly Meal Planner</h3>
+        <p>Select your favorite recipes and drag them to each day of the week to plan your meals efficiently!</p>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Breakfast</th>
+                    <th>Lunch</th>
+                    <th>Dinner</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Monday</td>
+                    <td>Placeholder Breakfast</td>
+                    <td>Placeholder Lunch</td>
+                    <td>Placeholder Dinner</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Placeholder Breakfast</td>
+                    <td>Placeholder Lunch</td>
+                    <td>Placeholder Dinner</td>
+                </tr>
+                <!-- Add rows for other days of the week -->
+            </tbody>
+        </table>
+        <div class="text-center mt-4">
+            <h3>Meal Planner</h3>
+            <p>Start planning your meals for the week and let us do the hard work of calculating shopping lists and
+                managing your schedule!</p>
+            <button class="btn btn-secondary" disabled>Meal Planner - Coming Soon</button>
+        </div>
+
+    </section>
+    <!-- Nutrition Labels Section -->
+    <section id="nutrition" class="container mt-5">
+        <h2>Nutrition Labels</h2>
+        <p>Get detailed nutritional information for your recipes!</p>
+        <!-- Placeholder for nutrition label feature -->
+    </section>
+    <!-- Contact Us Section -->
+    <section id="contact" class="container mt-5">
+        <h2>Contact Us</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+    <!-- Sign Up / Sign In Section -->
+    <section id="signup" class="container mt-5">
+        <h2>Sign Up / Sign In</h2>
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Digital Cookbook & Meal Planner | All rights reserved.</p>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

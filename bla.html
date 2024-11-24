@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Tasks</title>
+    <style>
+        /* Set background for entire page */
+        body {
+            background-color: lightgray;
+            font-family: Arial, sans-serif;
+        }
+        .task-section {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Task 1: Modify Paragraph Style -->
+    <div class="task-section">
+        <h2>Task 1: Modify Paragraph Style</h2>
+        <p id="paragraph">
+            It is rightly said that being disciplined is essential in life. When a person leads a disciplined life, they set an easy path to success. They will develop an approach to happiness and a beautiful future ahead. Being disciplined is the practice of having a scheduled daily routine which helps an individual to be punctual and hard-working. An individual is taught what being disciplined means from the time they are young. Even though discipline takes a lot of effort, the advantages of a disciplined life make it a worthwhile endeavour.
+        </p>
+        <form action="#">
+            <input type="submit" value="Change Style" onclick="changeParagraphStyle(event)">
+        </form>
+    </div>
+
+    <!-- Task 2: Form with Displayed Values -->
+    <div class="task-section">
+        <h2>Task 2: Form to Capture and Display Values</h2>
+        <form id="contactForm" onsubmit="displayFormValues(event)">
+            <label for="firstName">First Name:</label><br>
+            <input type="text" id="firstName" name="firstName" required><br><br>
+
+            <label for="lastName">Last Name:</label><br>
+            <input type="text" id="lastName" name="lastName" required><br><br>
+
+            <label for="contactNo">Contact No:</label><br>
+            <input type="tel" id="contactNo" name="contactNo" required><br><br>
+
+            <label for="email">Email ID:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <!-- Task 3: Remove Item from Dropdown -->
+    <div class="task-section">
+        <h2>Task 3: Remove Item from Dropdown</h2>
+        <select id="myDropdown">
+            <option value="item1">Item 1</option>
+            <option value="item2">Item 2</option>
+            <option value="item3">Item 3</option>
+            <option value="item4">Item 4</option>
+        </select>
+        <button onclick="removeSelectedItem()">Remove Selected Item</button>
+    </div>
+
+    <!-- JavaScript Code -->
+    <script>
+        // Task 1: Change the style of the paragraph
+        function changeParagraphStyle(event) {
+            event.preventDefault(); // Prevent form submission
+            var paragraph = document.getElementById("paragraph");
+            paragraph.style.fontFamily = "Courier New, monospace";
+            paragraph.style.fontSize = "20px";
+            paragraph.style.color = "blue";
+        }
+
+        // Task 2: Display form values on the page
+        function displayFormValues(event) {
+            event.preventDefault(); // Prevent form submission
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const contactNo = document.getElementById("contactNo").value;
+            const email = document.getElementById("email").value;
+
+            // Display the form values
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `
+                <h3>Form Data Submitted:</h3>
+                <p><strong>First Name:</strong> ${firstName}</p>
+                <p><strong>Last Name:</strong> ${lastName}</p>
+                <p><strong>Contact No:</strong> ${contactNo}</p>
+                <p><strong>Email ID:</strong> ${email}</p>
+            `;
+        }
+
+        // Task 3: Remove selected item from dropdown
+        function removeSelectedItem() {
+            var dropdown = document.getElementById("myDropdown");
+            dropdown.remove(dropdown.selectedIndex);
+        }
+    </script>
+
+</body>
+</html>

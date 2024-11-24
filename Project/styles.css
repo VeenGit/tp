@@ -1,0 +1,111 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+/* Navigation Bar with Light Background */
+.navbar {
+    background-color: #f8f9fa; /* Light background color */
+    color: #0056b3; /* Darker text color */
+}
+
+.navbar a {
+    color: #0056b3 !important; /* Darker text color for better contrast */
+    font-weight: bold;
+}
+
+/* Navbar link hover effect */
+.navbar a:hover {
+    background-color: #e0e0e0; /* Light gray background on hover for better contrast */
+    color: #003f7f; /* Even darker text color for visibility */
+}
+
+
+
+/* Jumbotron Styling for Home Section */
+#home .jumbotron {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Recipe Cards */
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+/* Meal Planner Table Styling */
+.table {
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: #007bff;
+    color: white;
+}
+
+.table td, .table th {
+    text-align: center;
+}
+
+.table td:hover {
+    cursor: pointer;
+    background-color: #f1f1f1; /* Light gray for hover effect */
+}
+
+/* Style for planned meals */
+.planned {
+    background-color: #d4edda; /* Light green background */
+    color: #155724; /* Dark green text */
+    font-weight: bold;
+}
+
+/* Footer Section */
+footer {
+    background-color: #0056b3; /* Darker shade of blue for better contrast */
+    color: #f1f1f1; /* Lighter color for readability */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    #recipes .card {
+        margin-bottom: 1rem;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+}
